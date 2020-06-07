@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://coderdusk.github.io</id>
+    <title>Coder Dusk</title>
+    <updated>2020-06-07T18:08:13.452Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://coderdusk.github.io"/>
+    <link rel="self" href="https://coderdusk.github.io/atom.xml"/>
+    <subtitle>Dusk 的个人博客</subtitle>
+    <logo>https://coderdusk.github.io/images/avatar.png</logo>
+    <icon>https://coderdusk.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, Coder Dusk</rights>
+    <entry>
+        <title type="html"><![CDATA[开始使用 iPad 办公]]></title>
+        <id>https://coderdusk.github.io/post/kai-shi-shi-yong-ipad-ban-gong/</id>
+        <link href="https://coderdusk.github.io/post/kai-shi-shi-yong-ipad-ban-gong/">
+        </link>
+        <updated>2020-06-07T17:49:23.000Z</updated>
+        <content type="html"><![CDATA[<p>今天开始尝试使用 iPad 办公，首先介绍一下设备列表：</p>
+<ul>
+<li>iPad Air 2</li>
+<li>罗技 K380 键盘</li>
+<li>吉选 蓝牙/2.4G 鼠标</li>
+</ul>
+<p>升级了 iPad OS 终于可以尝试把 iPad Air 2 当作笔记本使用了，之前一直就是看视频的机器；键盘手感一般，使用习惯了全尺寸键盘感觉有点小，需要适应，连接设备非常方便，有三个绿色的连接设备按键，按哪个就是连接到哪个设备，长按三秒就是配对；蓝牙鼠标就是当时打折，京东自营的到手19块钱，还挺好用的，本身还带电池，通过 Micro USB 充电。</p>
+<p>使用各种网页工具还是非常方便的，比如用幕布，因为有tab/shift键，可以非常方便的列大纲记笔记；我使用浏览器登录阿里云然后续费，也完全没问题。</p>
+<figure data-type="image" tabindex="1"><img src="https://coderdusk.github.io/post-images/1591552891585.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://coderdusk.github.io/post-images/1591552901441.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+</feed>

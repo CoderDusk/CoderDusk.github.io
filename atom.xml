@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://coderdusk.github.io</id>
     <title>Coder Dusk</title>
-    <updated>2020-06-07T18:08:41.214Z</updated>
+    <updated>2020-06-07T18:15:54.971Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://coderdusk.github.io"/>
     <link rel="self" href="https://coderdusk.github.io/atom.xml"/>
@@ -10,6 +10,73 @@
     <logo>https://coderdusk.github.io/images/avatar.png</logo>
     <icon>https://coderdusk.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Coder Dusk</rights>
+    <entry>
+        <title type="html"><![CDATA[像搬家打包箱子一样打包超大项目 - 《备份一个占用服务器近一半空间的项目》后续]]></title>
+        <id>https://coderdusk.github.io/post/xiang-ban-jia-da-bao-xiang-zi-yi-yang-da-bao-chao-da-xiang-mu-lesslessbei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu-greatergreater-hou-xu/</id>
+        <link href="https://coderdusk.github.io/post/xiang-ban-jia-da-bao-xiang-zi-yi-yang-da-bao-chao-da-xiang-mu-lesslessbei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu-greatergreater-hou-xu/">
+        </link>
+        <updated>2020-06-07T18:15:06.000Z</updated>
+        <content type="html"><![CDATA[<p>之前遇到的问题《备份一个占用服务器近一半空间的项目》，姑且算是解决了，但是这个事情还是一直在我心上时不时就会想起来，最近把这个问题在问答社区 segmentfault 上提问，很快就得到了回答，自己试验了成功了，特此把它记录下来。</p>
+<blockquote>
+<p>来自 segmentfault 上 但丁的贝雅特丽齐 的回答：</p>
+<pre><code>tar -zcvf xxx.tgz xxx.log --remove-files
+</code></pre>
+</blockquote>
+<p>如果不需要压缩，可以去掉 z 参数，打包成 .tar 文件。<br>
+关键是这个 --remove-files 参数，加了 -v 参数可以观察打包的过程，可以看到加了这个参数，是一个个把文件移动到打包文件内，打包成功了就移除源文件，就不会占用额外的空间。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[备份一个占用服务器近一半空间的项目]]></title>
+        <id>https://coderdusk.github.io/post/bei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu/</id>
+        <link href="https://coderdusk.github.io/post/bei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu/">
+        </link>
+        <updated>2020-06-07T18:14:28.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>本来想写个像模像样的简介，但是回顾整个过程后我发现其实也挺蠢的，不过这个过程对我来说也是一段经验，所以就写下来记录一下吧，如果对别人有帮助那就再好不过了。</p>
+</blockquote>
+<h2 id="背景">背景</h2>
+<ul>
+<li>项目已经停止运行，线上的服务已经停了</li>
+<li>服务器使用 Cent OS 操作系统，使用宝塔面板</li>
+<li>服务器上有三个网站，一种一个网站约30G，主要是附件图片全部存在了本地，没有使用云存储，而剩余空间已经不足30G</li>
+</ul>
+<h2 id="尝试过程">尝试过程</h2>
+<p>1.直接备份<br>
+首先直接尝试备份，由于剩余空间不足，压缩文件无法创建，备份失败</p>
+<p>2.SFTP 直接下载回本地<br>
+尝试使用 WinSCP 通过 SFTP 直接下载文件夹，可是由于小文件太多，程序预估下载时间需要数天，就算一直开机下载，也可能中间因为很多原因中断，还很可能不知道在哪里断的没办法断点续传，就几乎是不可能的。</p>
+<p>3.直接打包通过宝塔后台下载<br>
+将另外两个网站打包后下载回本地，删除了服务器上的文件，终于够空间打包压缩备份了。打包成功后开始下载，预估时间六小时就关屏幕挂机下载了，可是第二天看到下载失败，应该是宝塔后台登录失效了，也没办法断电续传了。</p>
+<h2 id="最终解决方法">最终解决方法</h2>
+<p>后来想到试试宝塔自带的阿里云OSS存储，用计划任务把网站备份到OSS上。一开始备份没成功，才意识到备份的原理是先备份到本地，然后上传到OSS，然后删除本地备份文件。<br>
+这样我先删除之前的备份，等待执行备份网站到OSS的计划任务就可以了，后期观察计划任务执行日志，发现打包成功后就是开始上传，看到网络流量的部分一直是全速上传，由于上传到OSS应该是通过相关接口的，不像我直接通过浏览器下载存在登录时间过长身份失效的问题，等待六小时后就可以通过OSS很快地下载回本地了。</p>
+<h2 id="后记">后记</h2>
+<p>光是这么一个开OSS，上传，下载回本地，就花了几块钱，还是挺贵的。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在 VSCode 中高亮显示 dwt、tpl 等文件]]></title>
+        <id>https://coderdusk.github.io/post/zai-vscode-zhong-gao-liang-xian-shi-dwttpl-deng-wen-jian/</id>
+        <link href="https://coderdusk.github.io/post/zai-vscode-zhong-gao-liang-xian-shi-dwttpl-deng-wen-jian/">
+        </link>
+        <updated>2020-06-07T18:10:58.000Z</updated>
+        <content type="html"><![CDATA[<p>.dwt / .tpl文件等模板文件虽然是 html 语法书写的，但 VSCode 默认也是无法将其按照 HTML 语法进行高亮显示的，得在设置中将这些文件格式和 html 进行关联。</p>
+<p>搜索出来的很多文章展示的是老版本的设置方法和截图，如下：</p>
+<figure data-type="image" tabindex="1"><img src="https://coderdusk.github.io/post-images/1591553600282.png" alt="" loading="lazy"></figure>
+<p>新版 VSCode 的设置方法已经变了，新版软件中应该这样设置：</p>
+<p>文件 -&gt; 选项 -&gt; 设置</p>
+<p>在搜索框中输入关联，编辑相应的设置项</p>
+<figure data-type="image" tabindex="2"><img src="https://coderdusk.github.io/post-images/1591553610809.png" alt="" loading="lazy"></figure>
+<p>在配置文件里添加：</p>
+<pre><code>&quot;files.associations&quot;: {
+    &quot;*.dwt&quot;: &quot;html&quot;
+}
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://coderdusk.github.io/post-images/1591553616914.png" alt="" loading="lazy"></figure>
+<p>保存后就立即生效了。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[开始使用 iPad 办公]]></title>
         <id>https://coderdusk.github.io/post/kai-shi-shi-yong-ipad-ban-gong/</id>

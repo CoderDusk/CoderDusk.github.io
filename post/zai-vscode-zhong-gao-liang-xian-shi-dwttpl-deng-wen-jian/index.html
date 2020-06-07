@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Coder Dusk</title>
+<title>在 VSCode 中高亮显示 dwt、tpl 等文件 | Coder Dusk</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,8 +18,9 @@
 
 
 
-    <meta name="description" content="Dusk 的个人博客">
-    
+    <meta name="description" content=".dwt / .tpl文件等模板文件虽然是 html 语法书写的，但 VSCode 默认也是无法将其按照 HTML 语法进行高亮显示的，得在设置中将这些文件格式和 html 进行关联。
+搜索出来的很多文章展示的是老版本的设置方法和截图，如下..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -89,72 +90,42 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://coderdusk.github.io/post/xiang-ban-jia-da-bao-xiang-zi-yi-yang-da-bao-chao-da-xiang-mu-lesslessbei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu-greatergreater-hou-xu/">
-                  <h2 class="post-title">像搬家打包箱子一样打包超大项目 - 《备份一个占用服务器近一半空间的项目》后续</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://coderdusk.github.io/post/bei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu/">
-                  <h2 class="post-title">备份一个占用服务器近一半空间的项目</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://coderdusk.github.io/post/zai-vscode-zhong-gao-liang-xian-shi-dwttpl-deng-wen-jian/">
-                  <h2 class="post-title">在 VSCode 中高亮显示 dwt、tpl 等文件</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://coderdusk.github.io/post/kai-shi-shi-yong-ipad-ban-gong/">
-                  <h2 class="post-title">开始使用 iPad 办公</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
+          <div class="post-detail">
+            <h2 class="post-title">在 VSCode 中高亮显示 dwt、tpl 等文件</h2>
+            <div class="post-date">2020-06-08</div>
+            
+            <div class="post-content" v-pre>
+              <p>.dwt / .tpl文件等模板文件虽然是 html 语法书写的，但 VSCode 默认也是无法将其按照 HTML 语法进行高亮显示的，得在设置中将这些文件格式和 html 进行关联。</p>
+<p>搜索出来的很多文章展示的是老版本的设置方法和截图，如下：</p>
+<figure data-type="image" tabindex="1"><img src="https://coderdusk.github.io/post-images/1591553600282.png" alt="" loading="lazy"></figure>
+<p>新版 VSCode 的设置方法已经变了，新版软件中应该这样设置：</p>
+<p>文件 -&gt; 选项 -&gt; 设置</p>
+<p>在搜索框中输入关联，编辑相应的设置项</p>
+<figure data-type="image" tabindex="2"><img src="https://coderdusk.github.io/post-images/1591553610809.png" alt="" loading="lazy"></figure>
+<p>在配置文件里添加：</p>
+<pre><code>&quot;files.associations&quot;: {
+    &quot;*.dwt&quot;: &quot;html&quot;
+}
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://coderdusk.github.io/post-images/1591553616914.png" alt="" loading="lazy"></figure>
+<p>保存后就立即生效了。</p>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://coderdusk.github.io/post/kai-shi-shi-yong-ipad-ban-gong/">
+                  <h3 class="post-title">
+                    开始使用 iPad 办公
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
 
         </div>
       </div>

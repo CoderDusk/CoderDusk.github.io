@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Coder Dusk</title>
+<title>像搬家打包箱子一样打包超大项目 - 《备份一个占用服务器近一半空间的项目》后续 | Coder Dusk</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,8 +18,10 @@
 
 
 
-    <meta name="description" content="Dusk 的个人博客">
-    
+    <meta name="description" content="之前遇到的问题《备份一个占用服务器近一半空间的项目》，姑且算是解决了，但是这个事情还是一直在我心上时不时就会想起来，最近把这个问题在问答社区 segmentfault 上提问，很快就得到了回答，自己试验了成功了，特此把它记录下来。
+
+来自 ..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -89,72 +91,36 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://coderdusk.github.io/post/xiang-ban-jia-da-bao-xiang-zi-yi-yang-da-bao-chao-da-xiang-mu-lesslessbei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu-greatergreater-hou-xu/">
-                  <h2 class="post-title">像搬家打包箱子一样打包超大项目 - 《备份一个占用服务器近一半空间的项目》后续</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://coderdusk.github.io/post/bei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu/">
-                  <h2 class="post-title">备份一个占用服务器近一半空间的项目</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://coderdusk.github.io/post/zai-vscode-zhong-gao-liang-xian-shi-dwttpl-deng-wen-jian/">
-                  <h2 class="post-title">在 VSCode 中高亮显示 dwt、tpl 等文件</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://coderdusk.github.io/post/kai-shi-shi-yong-ipad-ban-gong/">
-                  <h2 class="post-title">开始使用 iPad 办公</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
+          <div class="post-detail">
+            <h2 class="post-title">像搬家打包箱子一样打包超大项目 - 《备份一个占用服务器近一半空间的项目》后续</h2>
+            <div class="post-date">2020-06-08</div>
+            
+            <div class="post-content" v-pre>
+              <p>之前遇到的问题《备份一个占用服务器近一半空间的项目》，姑且算是解决了，但是这个事情还是一直在我心上时不时就会想起来，最近把这个问题在问答社区 segmentfault 上提问，很快就得到了回答，自己试验了成功了，特此把它记录下来。</p>
+<blockquote>
+<p>来自 segmentfault 上 但丁的贝雅特丽齐 的回答：</p>
+<pre><code>tar -zcvf xxx.tgz xxx.log --remove-files
+</code></pre>
+</blockquote>
+<p>如果不需要压缩，可以去掉 z 参数，打包成 .tar 文件。<br>
+关键是这个 --remove-files 参数，加了 -v 参数可以观察打包的过程，可以看到加了这个参数，是一个个把文件移动到打包文件内，打包成功了就移除源文件，就不会占用额外的空间。</p>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://coderdusk.github.io/post/bei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu/">
+                  <h3 class="post-title">
+                    备份一个占用服务器近一半空间的项目
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
 
         </div>
       </div>

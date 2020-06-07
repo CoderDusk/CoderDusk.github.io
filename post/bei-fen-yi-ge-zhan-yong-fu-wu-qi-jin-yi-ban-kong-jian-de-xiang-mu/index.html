@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>备份一个占用服务器近一半空间的项目 | Coder Dusk</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://coderdusk.github.io/favicon.ico?v=1591553751997">
+<link rel="stylesheet" href="https://coderdusk.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+本来想写个像模像样的简介，但是回顾整个过程后我发现其实也挺蠢的，不过这个过程对我来说也是一段经验，所以就写下来记录一下吧，如果对别人有帮助那就再好不过了。
+
+背景
+
+项目已经停止运行，线上的服务已经停了
+服务器使用 Cent OS 操作系..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://coderdusk.github.io">
+        <img src="https://coderdusk.github.io/images/avatar.png?v=1591553751997" class="site-logo">
+        <h1 class="site-title">Coder Dusk</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Dusk 的个人博客
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://coderdusk.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">备份一个占用服务器近一半空间的项目</h2>
+            <div class="post-date">2020-06-08</div>
+            
+            <div class="post-content" v-pre>
+              <blockquote>
+<p>本来想写个像模像样的简介，但是回顾整个过程后我发现其实也挺蠢的，不过这个过程对我来说也是一段经验，所以就写下来记录一下吧，如果对别人有帮助那就再好不过了。</p>
+</blockquote>
+<h2 id="背景">背景</h2>
+<ul>
+<li>项目已经停止运行，线上的服务已经停了</li>
+<li>服务器使用 Cent OS 操作系统，使用宝塔面板</li>
+<li>服务器上有三个网站，一种一个网站约30G，主要是附件图片全部存在了本地，没有使用云存储，而剩余空间已经不足30G</li>
+</ul>
+<h2 id="尝试过程">尝试过程</h2>
+<p>1.直接备份<br>
+首先直接尝试备份，由于剩余空间不足，压缩文件无法创建，备份失败</p>
+<p>2.SFTP 直接下载回本地<br>
+尝试使用 WinSCP 通过 SFTP 直接下载文件夹，可是由于小文件太多，程序预估下载时间需要数天，就算一直开机下载，也可能中间因为很多原因中断，还很可能不知道在哪里断的没办法断点续传，就几乎是不可能的。</p>
+<p>3.直接打包通过宝塔后台下载<br>
+将另外两个网站打包后下载回本地，删除了服务器上的文件，终于够空间打包压缩备份了。打包成功后开始下载，预估时间六小时就关屏幕挂机下载了，可是第二天看到下载失败，应该是宝塔后台登录失效了，也没办法断电续传了。</p>
+<h2 id="最终解决方法">最终解决方法</h2>
+<p>后来想到试试宝塔自带的阿里云OSS存储，用计划任务把网站备份到OSS上。一开始备份没成功，才意识到备份的原理是先备份到本地，然后上传到OSS，然后删除本地备份文件。<br>
+这样我先删除之前的备份，等待执行备份网站到OSS的计划任务就可以了，后期观察计划任务执行日志，发现打包成功后就是开始上传，看到网络流量的部分一直是全速上传，由于上传到OSS应该是通过相关接口的，不像我直接通过浏览器下载存在登录时间过长身份失效的问题，等待六小时后就可以通过OSS很快地下载回本地了。</p>
+<h2 id="后记">后记</h2>
+<p>光是这么一个开OSS，上传，下载回本地，就花了几块钱，还是挺贵的。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://coderdusk.github.io/post/zai-vscode-zhong-gao-liang-xian-shi-dwttpl-deng-wen-jian/">
+                  <h3 class="post-title">
+                    在 VSCode 中高亮显示 dwt、tpl 等文件
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

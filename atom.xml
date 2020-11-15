@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://coderdusk.github.io</id>
     <title>Coder Dusk</title>
-    <updated>2020-06-07T18:57:06.513Z</updated>
+    <updated>2020-11-15T19:01:20.762Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://coderdusk.github.io"/>
     <link rel="self" href="https://coderdusk.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://coderdusk.github.io/images/avatar.png</logo>
     <icon>https://coderdusk.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Coder Dusk</rights>
+    <entry>
+        <title type="html"><![CDATA[VSCode 中选入所有行的末尾]]></title>
+        <id>https://coderdusk.github.io/post/vscode-zhong-xuan-ru-suo-you-xing-de-mo-wei/</id>
+        <link href="https://coderdusk.github.io/post/vscode-zhong-xuan-ru-suo-you-xing-de-mo-wei/">
+        </link>
+        <updated>2020-11-15T18:47:27.000Z</updated>
+        <content type="html"><![CDATA[<p>在做一个《答案之书》，下载到的数据是每行 &quot;答案&quot; 的形式，不适合导入到数据库里，需要转换到 JSON 形式，如果直接替换其中的英文双引号并不区分前后</p>
+<p><code>&quot;data&quot;: [ 	&quot;找个人给你意见&quot;, 	&quot;算了吧&quot;, 	&quot;请教你的妈妈&quot;, 	&quot;当然咯&quot; ]</code></p>
+<p>之间想过一种方法，就是先把英文双引号转换成中文双引号，然后全文查找替换字符串，可是找到的工具都不能区分前后双引号。</p>
+<p>就只能用将光标插入到每一行的末尾统一进行编辑</p>
+<p>可能是我的搜索方式不对，不过以我标题的关键词去搜索 VSCode / Webstorm 中确实不那么容易找到相关快捷键，</p>
+<p>我找到的方式是，先 <code>Ctrl + A</code> 全选，再 <code>Shift + Alt + I</code> 在每行的末尾插入光标，这样就能统一编辑了</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[像搬家打包箱子一样打包超大项目 - 《备份一个占用服务器近一半空间的项目》后续]]></title>
         <id>https://coderdusk.github.io/post/xiang-ban-jia-da-bao-xiang-zi-yi-yang-da-bao-chao-da-xiang-mu-lesslessbei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu-greatergreater-hou-xu/</id>

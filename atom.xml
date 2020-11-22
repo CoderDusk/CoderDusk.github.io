@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://coderdusk.github.io</id>
     <title>Coder Dusk</title>
-    <updated>2020-11-15T19:01:40.948Z</updated>
+    <updated>2020-11-22T06:41:01.829Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://coderdusk.github.io"/>
     <link rel="self" href="https://coderdusk.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://coderdusk.github.io/images/avatar.png</logo>
     <icon>https://coderdusk.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Coder Dusk</rights>
+    <entry>
+        <title type="html"><![CDATA[uniapp 禁止页面上下滚动]]></title>
+        <id>https://coderdusk.github.io/post/uniapp-jin-zhi-ye-mian-shang-xia-gun-dong/</id>
+        <link href="https://coderdusk.github.io/post/uniapp-jin-zhi-ye-mian-shang-xia-gun-dong/">
+        </link>
+        <updated>2020-11-22T06:37:06.000Z</updated>
+        <content type="html"><![CDATA[<p>在 <code>page.json</code>  中的 <code>globalStyle</code> 设置里添加</p>
+<p><code>&quot;disableScroll&quot;:true</code></p>
+<p>相关文档 https://uniapp.dcloud.io/collocation/pages?id=app-plus</p>
+<figure data-type="image" tabindex="1"><img src="https://coderdusk.github.io/post-images/1606027253834.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[VSCode 中选入所有行的末尾]]></title>
         <id>https://coderdusk.github.io/post/vscode-zhong-xuan-ru-suo-you-xing-de-mo-wei/</id>

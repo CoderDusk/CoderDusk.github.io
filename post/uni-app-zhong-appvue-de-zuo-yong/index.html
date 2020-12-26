@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>uniapp 禁止页面上下滚动 | Coder Dusk</title>
+<title>uni-app 中 app.vue 的作用 | Coder Dusk</title>
 <meta name="description" content="Dusk 的个人博客">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -80,25 +80,25 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">uniapp 禁止页面上下滚动</h2>
+          <h2 class="post-title">uni-app 中 app.vue 的作用</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-11-22</span>
+            <span><i class="icon-calendar-outline"></i> 2020-12-26</span>
             
           </div>
           <div class="post-content">
-            <p>在 <code>page.json</code>  中的 <code>globalStyle</code> 设置里添加</p>
-<p><code>&quot;disableScroll&quot;:true</code></p>
-<p>相关文档 https://uniapp.dcloud.io/collocation/pages?id=app-plus</p>
-<figure data-type="image" tabindex="1"><img src="https://coderdusk.github.io/post-images/1606027253834.png" alt="" loading="lazy"></figure>
+            <p>来源：https://uniapp.dcloud.io/collocation/App</p>
+<p>App.vue是uni-app的主组件，所有页面都是在App.vue下进行切换的，是页面入口文件。但App.vue本身不是页面，这里不能编写视图元素。</p>
+<p>这个文件的作用包括：调用应用生命周期函数、配置全局样式、配置全局的存储globalData</p>
+<p>应用生命周期仅可在App.vue中监听，在页面监听无效。</p>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://coderdusk.github.io/post/vscode-zhong-xuan-ru-suo-you-xing-de-mo-wei/">
+            <a class="purple-link" href="https://coderdusk.github.io/post/uniapp-jin-zhi-ye-mian-shang-xia-gun-dong/">
               <h3 class="post-title">
-                下一篇：VSCode 中选入所有行的末尾
+                下一篇：uniapp 禁止页面上下滚动
               </h3>
             </a>
           </div>

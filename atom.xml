@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://coderdusk.github.io</id>
     <title>Coder Dusk</title>
-    <updated>2020-12-26T13:12:51.931Z</updated>
+    <updated>2020-12-26T13:14:58.640Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://coderdusk.github.io"/>
     <link rel="self" href="https://coderdusk.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://coderdusk.github.io/images/avatar.png</logo>
     <icon>https://coderdusk.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Coder Dusk</rights>
+    <entry>
+        <title type="html"><![CDATA[uni-app 中 app.vue 的作用]]></title>
+        <id>https://coderdusk.github.io/post/uni-app-zhong-appvue-de-zuo-yong/</id>
+        <link href="https://coderdusk.github.io/post/uni-app-zhong-appvue-de-zuo-yong/">
+        </link>
+        <updated>2020-12-26T13:13:37.000Z</updated>
+        <content type="html"><![CDATA[<p>来源：https://uniapp.dcloud.io/collocation/App</p>
+<p>App.vue是uni-app的主组件，所有页面都是在App.vue下进行切换的，是页面入口文件。但App.vue本身不是页面，这里不能编写视图元素。</p>
+<p>这个文件的作用包括：调用应用生命周期函数、配置全局样式、配置全局的存储globalData</p>
+<p>应用生命周期仅可在App.vue中监听，在页面监听无效。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[uniapp 禁止页面上下滚动]]></title>
         <id>https://coderdusk.github.io/post/uniapp-jin-zhi-ye-mian-shang-xia-gun-dong/</id>

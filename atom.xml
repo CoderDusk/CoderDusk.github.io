@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://coderdusk.github.io</id>
     <title>Coder Dusk</title>
-    <updated>2021-01-11T05:56:28.342Z</updated>
+    <updated>2021-01-11T05:57:51.021Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://coderdusk.github.io"/>
     <link rel="self" href="https://coderdusk.github.io/atom.xml"/>
@@ -73,8 +73,8 @@ http://timer.coderdusk.com/</p>
 <p>Android APK 下载<br>
 http://timer.coderdusk.com/static/todoTimer.apk</p>
 <h1 id="截图">截图</h1>
-<figure data-type="image" tabindex="1"><img src="https://wx1.sinaimg.cn/large/007Z41pTgy1gme1qhqmgvj30u01rkdlq.jpg" alt="设置单次计时器" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://wx3.sinaimg.cn/large/007Z41pTgy1gme1qkdn86j30u01rk0z3.jpg" alt="循环计时器" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://coderdusk.github.io/post-images/1610344657613.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://coderdusk.github.io/post-images/1610344663319.png" alt="" loading="lazy"></figure>
 <h1 id="开源托管地址">开源托管地址</h1>
 <p>https://github.com/CoderDusk/todoTimer</p>
 <h1 id="如何运行">如何运行</h1>

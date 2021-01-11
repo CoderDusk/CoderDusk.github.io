@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://coderdusk.github.io</id>
     <title>Coder Dusk</title>
-    <updated>2021-01-11T05:57:51.021Z</updated>
+    <updated>2021-01-11T05:59:28.495Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://coderdusk.github.io"/>
     <link rel="self" href="https://coderdusk.github.io/atom.xml"/>
@@ -16,16 +16,10 @@
         <link href="https://coderdusk.github.io/post/tu-dou-ji-shi-qi-todotimer/">
         </link>
         <updated>2021-01-06T07:33:01.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="简介">简介</h1>
-<p>土豆计时器（todoTimer)是一款基于 uni-app 的开源跨平台应用。<br>
-土豆计时器主要包含两个模块，单次计时器和循环计时器。单次计时器完成后直接退出。循环计时器可编辑计时器组和循环次数，完成所有步骤后退出。<br>
-土豆计时器可用于厨房计时、HIIT健身计时、行为习惯培养计时等场景。</p>
-]]></summary>
         <content type="html"><![CDATA[<h1 id="简介">简介</h1>
 <p>土豆计时器（todoTimer)是一款基于 uni-app 的开源跨平台应用。<br>
 土豆计时器主要包含两个模块，单次计时器和循环计时器。单次计时器完成后直接退出。循环计时器可编辑计时器组和循环次数，完成所有步骤后退出。<br>
 土豆计时器可用于厨房计时、HIIT健身计时、行为习惯培养计时等场景。</p>
-<!-- more -->
 <h1 id="功能结构">功能结构</h1>
 <ul>
 <li>单次计时器

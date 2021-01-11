@@ -2,14 +2,87 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://coderdusk.github.io</id>
     <title>Coder Dusk</title>
-    <updated>2020-12-26T13:14:58.640Z</updated>
+    <updated>2021-01-11T05:56:28.342Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://coderdusk.github.io"/>
     <link rel="self" href="https://coderdusk.github.io/atom.xml"/>
     <subtitle>Dusk 的个人博客</subtitle>
     <logo>https://coderdusk.github.io/images/avatar.png</logo>
     <icon>https://coderdusk.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Coder Dusk</rights>
+    <rights>All rights reserved 2021, Coder Dusk</rights>
+    <entry>
+        <title type="html"><![CDATA[土豆计时器 todoTimer]]></title>
+        <id>https://coderdusk.github.io/post/tu-dou-ji-shi-qi-todotimer/</id>
+        <link href="https://coderdusk.github.io/post/tu-dou-ji-shi-qi-todotimer/">
+        </link>
+        <updated>2021-01-06T07:33:01.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="简介">简介</h1>
+<p>土豆计时器（todoTimer)是一款基于 uni-app 的开源跨平台应用。<br>
+土豆计时器主要包含两个模块，单次计时器和循环计时器。单次计时器完成后直接退出。循环计时器可编辑计时器组和循环次数，完成所有步骤后退出。<br>
+土豆计时器可用于厨房计时、HIIT健身计时、行为习惯培养计时等场景。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="简介">简介</h1>
+<p>土豆计时器（todoTimer)是一款基于 uni-app 的开源跨平台应用。<br>
+土豆计时器主要包含两个模块，单次计时器和循环计时器。单次计时器完成后直接退出。循环计时器可编辑计时器组和循环次数，完成所有步骤后退出。<br>
+土豆计时器可用于厨房计时、HIIT健身计时、行为习惯培养计时等场景。</p>
+<!-- more -->
+<h1 id="功能结构">功能结构</h1>
+<ul>
+<li>单次计时器
+<ul>
+<li>首页 - 设置单次计时器</li>
+<li>已保存的单次计时器
+<ul>
+<li>添加单次计时器</li>
+<li>删除单次计时器</li>
+<li>读取单次计时器</li>
+</ul>
+</li>
+<li>单次计时器页面</li>
+</ul>
+</li>
+<li>循环计时器
+<ul>
+<li>首页 - 设置循环计时器
+<ul>
+<li>计时器列表</li>
+<li>循环次数</li>
+<li>保存当前计时器组</li>
+<li>新增计时器</li>
+</ul>
+</li>
+<li>已保存的循环计时器组
+<ul>
+<li>删除循环计时器组</li>
+<li>读取循环计时器组</li>
+</ul>
+</li>
+<li>循环计时器页面</li>
+</ul>
+</li>
+<li>设置
+<ul>
+<li>设置铃声</li>
+<li>设置音量</li>
+</ul>
+</li>
+</ul>
+<h1 id="预览">预览</h1>
+<p>Web 端针对移动端，桌面端仅为可用，推荐使用移动端设备打开，或桌面端以模拟调试方式查看。<br>
+http://timer.coderdusk.com/</p>
+<p>Android APK 下载<br>
+http://timer.coderdusk.com/static/todoTimer.apk</p>
+<h1 id="截图">截图</h1>
+<figure data-type="image" tabindex="1"><img src="https://wx1.sinaimg.cn/large/007Z41pTgy1gme1qhqmgvj30u01rkdlq.jpg" alt="设置单次计时器" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://wx3.sinaimg.cn/large/007Z41pTgy1gme1qkdn86j30u01rk0z3.jpg" alt="循环计时器" loading="lazy"></figure>
+<h1 id="开源托管地址">开源托管地址</h1>
+<p>https://github.com/CoderDusk/todoTimer</p>
+<h1 id="如何运行">如何运行</h1>
+<p>下载 uni-app 的官方IDE <a href="https://www.dcloud.io/hbuilderx.html">HBuilderX</a> 导入文件夹运行即可。</p>
+<h1 id="雇用我">雇用我</h1>
+<p>我现在正在寻找一份远程前端工作，全职、兼职、项目外包皆可。如果您有工作机会可以提供，欢迎通过邮箱(coderdusk@qq.com)或微信（hellodusk）联系我。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[uni-app 中 app.vue 的作用]]></title>
         <id>https://coderdusk.github.io/post/uni-app-zhong-appvue-de-zuo-yong/</id>

@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>像搬家打包箱子一样打包超大项目 - 《备份一个占用服务器近一半空间的项目》后续 | Coder Dusk</title>
+<title>土豆计时器 todoTimer | Coder Dusk</title>
 <meta name="description" content="Dusk 的个人博客">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -80,29 +80,81 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">像搬家打包箱子一样打包超大项目 - 《备份一个占用服务器近一半空间的项目》后续</h2>
+          <h2 class="post-title">土豆计时器 todoTimer</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-06-08</span>
+            <span><i class="icon-calendar-outline"></i> 2021-01-06</span>
             
           </div>
           <div class="post-content">
-            <p>之前遇到的问题《备份一个占用服务器近一半空间的项目》，姑且算是解决了，但是这个事情还是一直在我心上时不时就会想起来，最近把这个问题在问答社区 segmentfault 上提问，很快就得到了回答，自己试验了成功了，特此把它记录下来。</p>
-<blockquote>
-<p>来自 segmentfault 上 但丁的贝雅特丽齐 的回答：</p>
-<pre><code>tar -zcvf xxx.tgz xxx.log --remove-files
-</code></pre>
-</blockquote>
-<p>如果不需要压缩，可以去掉 z 参数，打包成 .tar 文件。<br>
-关键是这个 --remove-files 参数，加了 -v 参数可以观察打包的过程，可以看到加了这个参数，是一个个把文件移动到打包文件内，打包成功了就移除源文件，就不会占用额外的空间。</p>
+            <h1 id="简介">简介</h1>
+<p>土豆计时器（todoTimer)是一款基于 uni-app 的开源跨平台应用。<br>
+土豆计时器主要包含两个模块，单次计时器和循环计时器。单次计时器完成后直接退出。循环计时器可编辑计时器组和循环次数，完成所有步骤后退出。<br>
+土豆计时器可用于厨房计时、HIIT健身计时、行为习惯培养计时等场景。</p>
+<!-- more -->
+<h1 id="功能结构">功能结构</h1>
+<ul>
+<li>单次计时器
+<ul>
+<li>首页 - 设置单次计时器</li>
+<li>已保存的单次计时器
+<ul>
+<li>添加单次计时器</li>
+<li>删除单次计时器</li>
+<li>读取单次计时器</li>
+</ul>
+</li>
+<li>单次计时器页面</li>
+</ul>
+</li>
+<li>循环计时器
+<ul>
+<li>首页 - 设置循环计时器
+<ul>
+<li>计时器列表</li>
+<li>循环次数</li>
+<li>保存当前计时器组</li>
+<li>新增计时器</li>
+</ul>
+</li>
+<li>已保存的循环计时器组
+<ul>
+<li>删除循环计时器组</li>
+<li>读取循环计时器组</li>
+</ul>
+</li>
+<li>循环计时器页面</li>
+</ul>
+</li>
+<li>设置
+<ul>
+<li>设置铃声</li>
+<li>设置音量</li>
+</ul>
+</li>
+</ul>
+<h1 id="预览">预览</h1>
+<p>Web 端针对移动端，桌面端仅为可用，推荐使用移动端设备打开，或桌面端以模拟调试方式查看。<br>
+http://timer.coderdusk.com/</p>
+<p>Android APK 下载<br>
+http://timer.coderdusk.com/static/todoTimer.apk</p>
+<h1 id="截图">截图</h1>
+<figure data-type="image" tabindex="1"><img src="https://wx1.sinaimg.cn/large/007Z41pTgy1gme1qhqmgvj30u01rkdlq.jpg" alt="设置单次计时器" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://wx3.sinaimg.cn/large/007Z41pTgy1gme1qkdn86j30u01rk0z3.jpg" alt="循环计时器" loading="lazy"></figure>
+<h1 id="开源托管地址">开源托管地址</h1>
+<p>https://github.com/CoderDusk/todoTimer</p>
+<h1 id="如何运行">如何运行</h1>
+<p>下载 uni-app 的官方IDE <a href="https://www.dcloud.io/hbuilderx.html">HBuilderX</a> 导入文件夹运行即可。</p>
+<h1 id="雇用我">雇用我</h1>
+<p>我现在正在寻找一份远程前端工作，全职、兼职、项目外包皆可。如果您有工作机会可以提供，欢迎通过邮箱(coderdusk@qq.com)或微信（hellodusk）联系我。</p>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://coderdusk.github.io/post/bei-fen-yi-ge-zhan-yong-fu-wu-qi-jin-yi-ban-kong-jian-de-xiang-mu/">
+            <a class="purple-link" href="https://coderdusk.github.io/post/uni-app-zhong-appvue-de-zuo-yong/">
               <h3 class="post-title">
-                下一篇：备份一个占用服务器近一半空间的项目
+                下一篇：uni-app 中 app.vue 的作用
               </h3>
             </a>
           </div>

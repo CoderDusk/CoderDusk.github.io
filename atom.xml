@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://coderdusk.github.io</id>
     <title>Coder Dusk</title>
-    <updated>2021-02-16T14:22:04.802Z</updated>
+    <updated>2021-02-16T14:23:07.712Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://coderdusk.github.io"/>
     <link rel="self" href="https://coderdusk.github.io/atom.xml"/>
@@ -17,8 +17,7 @@
         </link>
         <updated>2021-02-16T13:16:33.000Z</updated>
         <content type="html"><![CDATA[<h1 id="简介">简介</h1>
-<p>本站地址：http://m.bokechaguan.com/#/<br>
-播客茶馆导航是一个播客相关资源的导航网站，包含播客推荐和播客相关资源。</p>
+<p>播客茶馆导航（http://m.bokechaguan.com/）是一个播客相关资源的导航网站，包含播客推荐和播客相关资源。</p>
 <h1 id="特点">特点</h1>
 <p>除了推荐优秀播客外，本站还有播客相关资源推荐，比如播客制作教程、RSS获取来源和推荐收听软件。<br>
 最重要的特点也是制作本站的初衷，可以批量把这些播客导出为OPML文件然后导入到播客客户端内。</p>
